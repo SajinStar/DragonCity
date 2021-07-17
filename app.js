@@ -1,6 +1,6 @@
 
 
-var swiper = new Swiper(".mySwiper1", {
+var swiper1 = new Swiper(".mySwiper1", {
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,
@@ -15,12 +15,30 @@ var swiper = new Swiper(".mySwiper3", {
   slidesPerView: 4,
   spaceBetween: 30,
   centeredSlides: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
 
   //  gsap anime
 
-  gsap.to('.landingSectionSvg',{duration:1,y:10})
+  swiper1.on("transitionEnd", function () {
+    if (isOdd(swiper1.realIndex)) {
+      gsap.to(".landingRotatingSvg", { left: 0, rotate: 180, top: 0 });
+    } else {
+      gsap.to(".landingRotatingSvg", {
+        left: 0,
+        rotate: 0,
+        bottom: -100,
+        top: "initial",
+      });
+    }
+  });
+  
+  function isOdd(num) {
+    return num % 2;
+  }
+
+gsap.from(".secondSliderIcon", { opacity: 1, duration: 3, x: -500 });
+

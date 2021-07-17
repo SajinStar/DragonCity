@@ -307,10 +307,6 @@ height: 100%;
                                                                                        */
 
 .testimonialsSliderText  {
-  position: absolute;
-  z-index: 99999;
-   top: 25%;
-  left: 45%;
   color: rgb(255, 255, 255);
 }
 
@@ -616,7 +612,6 @@ height: auto;
 
 .mySwiper3 {
   width: 100%;
-  margin-top: 10vh;
 }
 
 .mySwiper3 .swiper-wrapper .swiper-slide {
@@ -651,8 +646,41 @@ height: auto;
 
 .swiperSlidersBg {
   position: absolute;  
+    left: 37.5%;
+    top: 23%;
+    z-index: 9999;
 }
 
 .swiperSlidersBg img {
-  width: 350px;
+  width: 334px;
+}
+.swiper-button-prev {
+  z-index: 99999;
+  left: 47%;
+  top: 98%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #EEE4B4;
+}
+
+.swiper-button-next {
+  right: 47%;
+  top: 98%;
+ z-index: 99999;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #EEE4B4;
+  
+} 
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+  content: 'next';
+  font-size: 16px;
+  color: #D4575C;
+}
+.swiper-button-prev::after, .swiper-container-rtl .swiper-button-next::after {
+    content: "prev";
+    font-size: 16px;
+    color: #D4575C;
 }
