@@ -27,24 +27,24 @@ var swiper = new Swiper(".mySwiper3", {
 
 
 const frameImg=document.querySelector(".landingPageImageInside")
+const Svg=document.querySelector(".landingRotatingSvg")
 
   swiper1.on("transitionEnd", function () {
    
     if (isOdd(swiper1.realIndex)) {
-      gsap.to(".landingRotatingSvg", { left: 0, rotate: 180, top: 0 , duration:2,  });
-    } else {
-      gsap.to(".landingRotatingSvg", {
-        left: 0,
-        rotate:0,
-        bottom: -100,
-        top: "initial",
-        duration:1.5,
+      Svg.classList.add("activeR")
 
-      });
+    } else {
+      Svg.classList.remove("activeR")
+
+     
     }
+
+  
+
+
     if (swiper1.realIndex==0){
       gsap.from(".landingSectionApp", { 
-        scrollTrigger:"landingSectionApp",
         opacity: .2,
          duration:2, 
          y:-200 ,yoyo:true,
@@ -128,3 +128,22 @@ gsap.from(".secondSliderIcon", {
 // myImgs.forEach(image => {
 //   observer.observe(image);
 // });
+
+
+  // if (isOdd(swiper1.realIndex)) {
+    // gsap.to(".landingRotatingSvg", { left: 0, rotate: 180, top: 0 , duration:2,  });
+
+//       var tl = gsap.timeline({ defaults: {duration: 3,} } );
+// tl.to(".landingRotatingSvg", {left: -270}) 
+//   .to(".landingRotatingSvg", {rotate: 180 ,top: 0, transformOrigin:"left"})
+//   .to(".landingRotatingSvg", {left:"100%"});
+  // } else {
+    // gsap.to(".landingRotatingSvg", {
+    //   left: 0,
+    //   rotate:0,
+    //   bottom: -100,
+    //   top: "initial",
+    //   duration:1.5,
+
+    // });
+  

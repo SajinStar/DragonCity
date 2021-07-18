@@ -1,12 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-}
-
-
-
-.swiperSection {
   
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.swiperSection {
   height: 100vh;
 }
 
@@ -25,18 +25,17 @@ height: 100%;
 .landingSection  {
   height: 100vh !important;
  position: relative;
- overflow: hidden;
+ /* overflow: hidden; */
  
 }
-.landingSection svg {
+/* .landingSection svg {
   width: 100%;
   height:auto;
   position: absolute;
   bottom: -100px;
-  /* transition: 1s .2s cubic-bezier(.88,.17,0,.99); */
   
 
-}
+} */
 .landingPageLogo {
   display: flex;
   justify-content: center;
@@ -765,4 +764,50 @@ height: auto;
     content: "prev";
     font-size: 16px;
     color: #D4575C;
+}
+
+
+.animeEx {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.landingRotatingSvg {
+  /* width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: auto;
+  width: 144vw;
+  height: 186%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  transition: 1s .2s cubic-bezier(.88,.17,0,.99); 
+   will-change: transform; */
+   width: 100%; 
+    /* height: 300px; */
+    position: absolute;
+    top: 0%;
+    /* left: auto; */
+    width: 100vw;
+    height: 170%;
+   
+    /* backface-visibility: hidden; */
+   
+    transform-style: preserve-3d;
+    transform-origin: 34% 0;
+    transition: 1s .2s cubic-bezier(.88,.17,0,.99);
+    will-change: transform;
+}
+.activeR {
+  transform: rotate(180deg);
+  top: 110%;
+  transform-origin: 50% 0;
+
 }
