@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  
+  scroll-behavior: smooth;
+  overflow: hidden;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -673,7 +674,6 @@ height: auto;
   transition: 1s .2s cubic-bezier(.88,.17,0,.99);
     will-change: transform;
     top: -100px;
-    
 } */
 
 
@@ -728,7 +728,7 @@ height: auto;
 .swiperSlidersBg {
   position: absolute;  
     left: 38%;
-    top: 19%;
+    top: 18%;
     z-index: 9999;
 }
 
@@ -809,5 +809,11 @@ height: auto;
   transform: rotate(180deg);
   top: 110%;
   transform-origin: 50% 0;
+
+}
+.activeEven {
+  transform: rotate( 360deg);
+    top: 0%;
+    transform-origin: 54% 0;
 
 }

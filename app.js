@@ -12,9 +12,10 @@ var swiper1 = new Swiper(".mySwiper1", {
   },
 });
 var swiper = new Swiper(".mySwiper3", {
-  slidesPerView: 4,
+  slidesPerView: 5,
   spaceBetween: 30,
-  centeredSlides: true,
+  centeredSlides: false,
+  loop:true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -28,21 +29,39 @@ var swiper = new Swiper(".mySwiper3", {
 
 const frameImg=document.querySelector(".landingPageImageInside")
 const Svg=document.querySelector(".landingRotatingSvg")
-
+const bgSlider=document.querySelector(".firstSlideWrapper")
   swiper1.on("transitionEnd", function () {
    
-    if (isOdd(swiper1.realIndex)) {
-      Svg.classList.add("activeR")
+if (swiper1.realIndex > 2){
+  bgSlider.style.display="none"
+} else {
+  bgSlider.style.display="block"
+}
+if(swiper1.realIndex ==1){
+  Svg.classList.add("activeR")
+  Svg.classList.remove("activeEven")
+}else if (swiper1.realIndex ==2) {
+  Svg.classList.add("activeEven")
+  Svg.classList.remove("activeR")
+} else if (swiper1.realIndex ==0){
+  Svg.classList.remove("activeR")
+  Svg.classList.remove("activeEven")
+}
 
-    } else {
-      Svg.classList.remove("activeR")
 
+    // if (isOdd(swiper1.realIndex)) {
+    //   Svg.classList.add("activeR")
+    //   Svg.classList.remove("activeEven") 
      
-    }
 
-  
-
-
+    // } else {
+    //   Svg.classList.add("activeEven") 
+    //   Svg.classList.remove("activeR")
+    // }
+    // if(swiper.realIndex == 0){
+    //   Svg.classList.remove("activeEven") 
+    // }
+    
     if (swiper1.realIndex==0){
       gsap.from(".landingSectionApp", { 
         opacity: .2,
@@ -64,15 +83,14 @@ const Svg=document.querySelector(".landingRotatingSvg")
           duration:2,
            y:300 
         });
-       frameImg.src="./Img/landingpageImg/1 page image.png"
-       
+       frameImg.src="./Img/landingpageImg/1 page image.png"      
    
     }
     if (swiper1.realIndex==1){
-      gsap.from(".secondSliderIcon", {
-        opacity: 1,
-         duration:3,
-          y:100 ,
+      gsap.from(".secondSliderAbsoulteItems", {
+        opacity: 0.2,
+         duration:2,
+          y:200 ,
        });
        gsap.from(".landingPageImageBgText", { 
         opacity: .2,
@@ -95,11 +113,8 @@ const Svg=document.querySelector(".landingRotatingSvg")
          y:-200 
       });
       frameImg.src="./Img/thirdSlider/thirdsliderMblImg.png"
-    }
-    
+    } 
   });
-
-
 
   function isOdd(num) {
     return num % 2;
