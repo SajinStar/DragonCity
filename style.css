@@ -690,6 +690,10 @@ font-family: 'EuclidSquare-Regular.woff';
   justify-content: center;
 }
 
+.footerTopIcons a {
+  width: fit-content;
+  text-decoration: none;
+}
 .footerTopIconsFb {
   display: flex;
   width: 50px;
