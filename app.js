@@ -3,7 +3,7 @@
 var swiper1 = new Swiper(".mySwiper1", {
   pagination: {
     el: ".swiper-pagination",
-    dynamicBullets: true,
+    // dynamicBullets: true,
     clickable: true,
   },
   direction: "vertical",
@@ -15,6 +15,7 @@ var swiper = new Swiper(".mySwiper3", {
   slidesPerView: 5,
   spaceBetween: 30,
   centeredSlides: false,
+  mousewheelControl: true,
   loop:true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -30,9 +31,20 @@ var swiper = new Swiper(".mySwiper3", {
 const frameImg=document.querySelector(".landingPageImageInside")
 const Svg=document.querySelector(".landingRotatingSvg")
 const bgSlider=document.querySelector(".firstSlideWrapper")
+const BgInsideImg=document.querySelector(".landingPageImage")
   swiper1.on("transitionEnd", function () {
-   
+    gsap.to(".landingPageImageInside", { 
+      opacity:1,
+      duration:2,
+      width:"300px",
+    });
+
 if (swiper1.realIndex > 2){
+  BgInsideImg.style.display="none"
+} else {
+  BgInsideImg.style.display="flex"
+}
+if (swiper1.realIndex > 4){
   bgSlider.style.display="none"
 } else {
   bgSlider.style.display="block"
@@ -40,13 +52,44 @@ if (swiper1.realIndex > 2){
 if(swiper1.realIndex ==1){
   Svg.classList.add("activeR")
   Svg.classList.remove("activeEven")
-}else if (swiper1.realIndex ==2) {
+  frameImg.style.width="1px"
+  gsap.to(".landingPageImageInside", { 
+    opacity:1,
+    duration:.5,
+    width:"300px",
+  });
+} else if (swiper1.realIndex ==2) {
   Svg.classList.add("activeEven")
   Svg.classList.remove("activeR")
-} else if (swiper1.realIndex ==0){
+  frameImg.style.width="1px"
+  gsap.to(".landingPageImageInside", { 
+    opacity:1,
+    duration:0.5,
+    width:"300px",
+  });
+  
+} if(swiper1.realIndex ==3){
+  Svg.classList.add("activeR")
+  Svg.classList.remove("activeEven")
+ 
+  
+}else if (swiper1.realIndex ==4) {
+  Svg.classList.add("activeEven")
+  Svg.classList.remove("activeR")
+
+  
+}
+
+
+
+else if (swiper1.realIndex ==0){
   Svg.classList.remove("activeR")
   Svg.classList.remove("activeEven")
-}
+  frameImg.src="./Img/landingpageImg/1 page image.png"     
+
+} 
+
+
 
 
     // if (isOdd(swiper1.realIndex)) {
@@ -62,7 +105,7 @@ if(swiper1.realIndex ==1){
     //   Svg.classList.remove("activeEven") 
     // }
     
-    if (swiper1.realIndex==0){
+    if (swiper1.realIndex ==0){
       gsap.from(".landingSectionApp", { 
         opacity: .2,
          duration:2, 
@@ -83,7 +126,6 @@ if(swiper1.realIndex ==1){
           duration:2,
            y:300 
         });
-       frameImg.src="./Img/landingpageImg/1 page image.png"      
    
     }
     if (swiper1.realIndex==1){
@@ -101,11 +143,9 @@ if(swiper1.realIndex ==1){
        
     }else if (swiper1.realIndex==2){
       gsap.from(".thirdSliderIcons",{
-        opacity:0.2,
+        opacity:0,
         duration:2,
-        x:50,
-        y:50,
-        stagger:0.2,
+        
       })
       gsap.from(".landingPageImageBgText", { 
         opacity: .2,
@@ -161,4 +201,6 @@ gsap.from(".secondSliderIcon", {
     //   duration:1.5,
 
     // });
+
+
   
