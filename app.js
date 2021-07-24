@@ -3,16 +3,14 @@
 var swiper1 = new Swiper(".mySwiper1", {
   pagination: {
     el: ".swiper-pagination",
-    // dynamicBullets: true,
-    clickable: true,
-
-    
+    clickable: true, 
   },
   direction: "vertical",
   mousewheel: {
     releaseOnEdges: true,
   },
 });
+
 var swiper = new Swiper(".mySwiper3", {
   slidesPerView: 5,
   spaceBetween: 30,

@@ -409,7 +409,7 @@ font-family: 'EuclidSquare-Regular.woff';
 }
 
 .videoSliderCol iframe {
-  width: 700px;
+  max-width: 700px !important;
   height: 353px;
   border-radius: 30px;
   z-index: 99999;
@@ -538,7 +538,10 @@ font-family: 'EuclidSquare-Regular.woff';
   width: 130px;
   height: auto;
 }
-
+.accordion {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 .accordion h1 {
   color: white;
@@ -590,10 +593,6 @@ font-family: 'EuclidSquare-Regular.woff';
   height: auto;
   background-color: #ED656B !important;
   color: rgb(0, 0, 0) !important;
-  display: flex;
-  justify-content: center;
-  
-
 }
 
 .accordion-item {
@@ -605,9 +604,7 @@ font-family: 'EuclidSquare-Regular.woff';
 .accordion-button {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-  padding:1em 26.2em 1em 1.4em;
   font-weight: 400;
-  width: 100%;
   border: 0;
   text-align: left;
   font-size: 24px !important;
@@ -630,7 +627,6 @@ font-family: 'EuclidSquare-Regular.woff';
 }
 
 .accordion-body {
-  width: 934px;
     font-size: 1.625rem;
     font-weight: 400;
     height: auto;
