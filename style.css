@@ -1,3 +1,5 @@
+@import url(./font/);
+
 
 body {
   margin: 0;
@@ -223,6 +225,16 @@ font-family: 'EuclidSquare-Regular.woff';
     font-weight: 600 !important;
     
    }
+
+   .landingPageImageCover {
+    width: 200px;
+  }
+  .landingPageImageInside {
+    width: 200px !important;
+  }
+  .landingSectionApp{
+   left: 3%;
+  }
 }
 
 /*                 
@@ -260,15 +272,18 @@ font-family: 'EuclidSquare-Regular.woff';
   height: 100vh !important;
   position: relative;
   overflow: hidden;
-}
-
-.secondSliderSection svg {
-  width: 100%;
-  height:auto;
-  position: absolute;
-  bottom: -100px;
   
-
+}
+.thirdSliderSection  {
+  height: 100vh !important;
+  position: relative;
+  overflow: hidden;
+  padding-top: 160px;
+}
+.videoSliderSection  {
+  height: 100vh !important;
+  position: relative;
+  overflow: hidden;
 }
 
 .secondSliderAbsoulteItems{
@@ -393,6 +408,22 @@ font-family: 'EuclidSquare-Regular.woff';
   z-index: 999999;
 }
 
+@media only screen and (max-width: 500px) {
+  .thirdSliderAllIcons {
+    position: static;
+  }
+  .thirdSliderIcons {
+    width: 63px;
+  }
+  .videoSliderCol iframe {
+    width: 320px !important;
+    height: 240px !important;
+  }
+  .videoSliderCol {
+    margin-top: 50px;
+}
+}
+
 .secondSliderText {
   
   position: absolute;
@@ -511,7 +542,10 @@ font-family: 'EuclidSquare-Regular.woff';
   width: 150px;
   height: auto;
 }
-
+.mySwiper4 {
+  overflow: visible;
+  margin: 62px 0px 0px 25px;
+}
 
 
 
@@ -525,6 +559,7 @@ font-family: 'EuclidSquare-Regular.woff';
 
 .questionSection {
   background-color: #ED656B;
+  height: 100vh;
 }
 
 .questionPageLogo {
@@ -797,6 +832,7 @@ height: auto;
 
 
 .firstSlideWrapper {
+  overflow: hidden;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -909,14 +945,14 @@ height: auto;
     will-change: transform;
 }
 
-/* @media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .landingRotatingSvg {
-    height: 154%;
-    width: 172vw;
+    height: 145%;
+    width: 316vw;
     top: 0%;
-    left: -37%;
+    left: -99%;
   }
-} */
+}
 
 .activeR {
   transform: rotate(180deg);
