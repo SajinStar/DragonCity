@@ -1,5 +1,3 @@
-@import url(font/EuclidSquare-Regular.woff);
-
 
 body {
   margin: 0;
@@ -674,8 +672,6 @@ font-family: 'EuclidSquare-Regular.woff';
 
 /*                       footer                           */
 
-
-
 .footerTop {
   height: 50vh;
 }
@@ -690,7 +686,7 @@ font-family: 'EuclidSquare-Regular.woff';
   justify-content: center;
 }
 
-.footerTopIcons a {
+.footerTopIcons > a {
   width: fit-content;
   text-decoration: none;
 }
