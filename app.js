@@ -11,7 +11,7 @@ var swiper1 = new Swiper(".mySwiper1", {
   },
 });
 
-var swiper = new Swiper(".mySwiper3", {
+var swiper2 = new Swiper(".mySwiper3", {
   slidesPerView: 5,
   spaceBetween: 30,
   centeredSlides: false,
@@ -49,7 +49,7 @@ var swiper = new Swiper(".mySwiper3", {
 
 });
 
-var swiper = new Swiper(".mySwiper4", {
+var swiper3 = new Swiper(".mySwiper4", {
   slidesPerView: 3,
   spaceBetween: 30,
   centeredSlides: false,

@@ -1,6 +1,10 @@
-@import url(./font/);
 
-
+@font-face {
+  font-family: "EuclidSquare";
+  src: url("/font/EuclidSquare-Medium.ttf") format("ttf"),
+       url("/font/EuclidSquare-Medium.woff") format("woff");
+  font-weight: 500;
+}
 body {
   margin: 0;
   padding: 0;
@@ -88,7 +92,8 @@ height: 100%;
 
 .landingPageBotText p {
  font-size: 18px;
- font-weight: 200;
+ font-weight: 300;
+ letter-spacing: 2px;
  
  
 }
@@ -96,7 +101,8 @@ height: 100%;
 .landingPageBotText h1 {
  font-size: 30px !important;
  font-weight: 600 !important;
-font-family: 'EuclidSquare-Regular.woff';
+ font-family: 'EuclidSquare' !important;
+ letter-spacing: 2px;
 }
 
 .landingPageImage {
@@ -471,18 +477,18 @@ font-family: 'EuclidSquare-Regular.woff';
   height: 100vh;
   position: relative;
 }
-.testimonialsFirstBox, .testimonialsSecondBox , .testimonialsThirdBox > div > p {
+.testimonialBox > div > p {
   color: white;
 }
 
-.testimonialsFirstBox , .testimonialsSecondBox , .testimonialsThirdBox {
+.testimonialBox{
   background-color:  #ffdada87;
     text-align: start;
     font-size: 14px;
     padding: 55px 39px;
     border: 8px solid #f1f1f15c;
     border-radius: 21px;
-    width: 400px;
+    max-width: 400px;
     position: relative;
 }
 
