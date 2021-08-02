@@ -361,6 +361,9 @@ height: 100%;
   .secondSliderAbsoulteItems p {
     display: none;
   }
+  .secondSliderRightText .secondSliderHt {
+    color: black;
+  }
 
   .secondSliderIcon {
     width: 35px;
@@ -448,6 +451,7 @@ order: 1;
   padding-left: 40px;
   font-family: 'EuclidSquare' !important;
 }
+
 .secondSliderWhite {
   color: white;
 }
@@ -1111,6 +1115,7 @@ height: auto;
 
 .mySwiper3 {
   width: 100%;
+  position: relative;
 }
 
 .mySwiper3 .swiper-wrapper .swiper-slide {
@@ -1157,7 +1162,7 @@ height: auto;
     position: absolute;
     left: 0;
     right: 0;
-    top: 18%;
+    top: -7%;
     margin-right: auto;
     z-index: 9999;
 }
