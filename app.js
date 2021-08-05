@@ -1,4 +1,8 @@
-
+// jQuery(window).mousewheel(function(event, delta, deltaX, deltaY){
+//   if(delta < 0) page.scrollTop(page.scrollTop() + 65);
+//   else if(delta > 0) page.scrollTop(page.scrollTop() - 65);
+//   return false;
+// })
 
 var swiper1 = new Swiper(".mySwiper1", {
   pagination: {
@@ -91,19 +95,10 @@ var swiper3 = new Swiper(".mySwiper4", {
 
 
   //  gsap anime
-
-
-const frameImg=document.querySelector(".landingPageImageInside")
 const Svg=document.querySelector(".landingRotatingSvg")
 const bgSlider=document.querySelector(".firstSlideWrapper")
 const BgInsideImg=document.querySelector(".landingPageImage")
   swiper1.on("transitionEnd", function () {
-    gsap.to(".landingPageImageInside", { 
-      opacity:1,
-      duration:2,
-      width:"300px",
-    });
-
 if (swiper1.realIndex > 2){
   BgInsideImg.style.display="none"
 } else {
@@ -117,28 +112,42 @@ if (swiper1.realIndex > 4){
 if(swiper1.realIndex ==1){
   Svg.classList.add("activeR")
   Svg.classList.remove("activeEven")
-  frameImg.style.width="1px"
-  gsap.to(".landingPageImageInside", { 
-    opacity:1,
-    duration:.5,
+  gsap.to(".secondSliderImageInsideSecond", { 
+    zIndex:4,
     width:"300px",
   });
-} else if (swiper1.realIndex ==2) {
+}else{
+  gsap.from(".secondSliderImageInsideSecond", {  
+    zIndex: 2,
+   })
+} 
+
+if (swiper1.realIndex ==2) {
   Svg.classList.add("activeEven")
   Svg.classList.remove("activeR")
-  frameImg.style.width="1px"
-  gsap.to(".landingPageImageInside", { 
-    opacity:1,
-    duration:0.5,
+  gsap.to(".secondSliderImageInsideThird", { 
+    zIndex:5,
     width:"300px",
   });
   
-} if(swiper1.realIndex ==3){
-  Svg.classList.add("activeR")
-  Svg.classList.remove("activeEven")
- 
+}else {
+  gsap.to(".secondSliderImageInsideThird", { 
+    zIndex:1,
+    width:"300px",
+  });
+}
+
+
+if(swiper1.realIndex ==3){
+  Svg.classList.remove("activeEven") 
+  Svg.classList.add("activeRot")
   
-}else if (swiper1.realIndex ==4) {
+// }else {
+//   Svg.classList.remove("activeR")
+//   Svg.classList.remove("activeEven")
+// }
+
+}if (swiper1.realIndex ==4) {
   Svg.classList.add("activeEven")
   Svg.classList.remove("activeR")
 
@@ -147,12 +156,21 @@ if(swiper1.realIndex ==1){
 
 
 
-else if (swiper1.realIndex ==0){
+ if (swiper1.realIndex ==0){
   Svg.classList.remove("activeR")
   Svg.classList.remove("activeEven")
-  frameImg.src="./Img/landingpageImg/1 page image.png"     
+  gsap.to(".secondSliderImageInsidefirst", { 
+    width:"300px",
+    zIndex:6,
+  });
+  // frameImg.src="./Img/landingpageImg/1 page image.png"     
 
-} 
+} else {
+  gsap.to(".secondSliderImageInsidefirst", { 
+    zIndex:1,
+    width:"300px",
+  });
+}
 
 
 
@@ -204,7 +222,7 @@ else if (swiper1.realIndex ==0){
          duration:2, 
          y:-200 
       });
-       frameImg.src="./Img/secondSlider/2nd page image.png"
+      //  frameImg.src="./Img/secondSlider/2nd page image.png"
        
     }else if (swiper1.realIndex==2){
       gsap.from(".thirdSliderIcons",{
@@ -217,7 +235,7 @@ else if (swiper1.realIndex ==0){
          duration:2, 
          y:-200 
       });
-      frameImg.src="./Img/thirdSlider/thirdsliderMblImg.png"
+      // frameImg.src="./Img/thirdSlider/thirdsliderMblImg.png"
     } 
   });
 
@@ -268,4 +286,5 @@ gsap.from(".secondSliderIcon", {
     // });
 
 
-  
+
+                                                                                                                                                                                

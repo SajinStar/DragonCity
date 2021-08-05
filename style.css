@@ -33,6 +33,7 @@ height: 100%;
   right: 25px;
   top: 50%;
   transform: translate3d(0px,-50%,0);
+  cursor: pointer;
   
 }
 .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -104,6 +105,9 @@ height: 100%;
  font-family: 'EuclidSquare' !important;
  letter-spacing: 2px;
 }
+.landingPageBot .col {
+  z-index: 1;
+}
 
 .landingPageImage {
   display: flex;
@@ -119,13 +123,24 @@ height: 100%;
   /* box-shadow: -18px 21px 42px -5px rgba(0,0,0,0.43) */
 }
 
-.landingPageImageInside {
+.secondSliderImageInsidefirst {
+  z-index: 3;
   height: 100%;
   position: absolute;
-  z-index: 0;
-  /* transition: all 1s ease-in-out; */
-  /* left: 355px; */
 }
+
+.secondSliderImageInsideSecond {
+  z-index: 2;
+  height: 100%;
+  position: absolute;
+  width: 0px;
+}
+.secondSliderImageInsideThird {
+  z-index: 1;
+  height: 100%;
+  position: absolute;
+}
+
 .landingPageImageBgText {
   color: #e3dadb;
   font-size: 125px;
@@ -157,6 +172,12 @@ height: 100%;
   width:130px ;
   height: auto;
   margin-top: 20px;
+}
+
+.landingPageBot {
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 400px), 
@@ -210,10 +231,13 @@ height: 100%;
 }
 @media only screen and (max-width: 500px) {
   .landingPageBot {
-    height: 60vh;
+    height: 100vh;
     display: flex;
     align-items: center;
   }
+  .landingPageImageInside {
+  width: 200px !important;
+  } 
   .landingPageImageBgText {
     /* top: 20%;
     font-size: 95px;
@@ -248,9 +272,9 @@ height: 100%;
    .landingPageImageCover {
     width: 200px;
   }
-  .landingPageImageInside {
+  /* .landingPageImageInside {
     width: 200px !important;
-  }
+  } */
   .landingSectionApp{
    left: 3%;
   }
@@ -881,10 +905,10 @@ order: 1;
   border-radius: 20px !important;
 }
 .accordion-button::after {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   content: "+";
-  font-size: 36px;
+  font-size: 30px;
   background-image: none;
   font-weight: 300;
   border-radius: 50%;
