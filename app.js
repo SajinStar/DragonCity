@@ -98,6 +98,8 @@ var swiper3 = new Swiper(".mySwiper4", {
 const Svg=document.querySelector(".landingRotatingSvg")
 const bgSlider=document.querySelector(".firstSlideWrapper")
 const BgInsideImg=document.querySelector(".landingPageImage")
+const thirdOnlyShow=document.querySelector(".tirdSliderShopAdd")
+const thirdOnlyShowSecond=document.querySelector(".tirdSliderShopAddItoys")
   swiper1.on("transitionEnd", function () {
 if (swiper1.realIndex > 2){
   BgInsideImg.style.display="none"
@@ -125,12 +127,16 @@ if(swiper1.realIndex ==1){
 if (swiper1.realIndex ==2) {
   Svg.classList.add("activeEven")
   Svg.classList.remove("activeR")
+  thirdOnlyShow.style.display="block"
+  thirdOnlyShowSecond.style.display="block"
   gsap.to(".secondSliderImageInsideThird", { 
     zIndex:5,
     width:"300px",
   });
   
 }else {
+  thirdOnlyShow.style.display="none"
+  thirdOnlyShowSecond.style.display="none"
   gsap.to(".secondSliderImageInsideThird", { 
     zIndex:1,
     width:"300px",
@@ -140,7 +146,7 @@ if (swiper1.realIndex ==2) {
 
 if(swiper1.realIndex ==3){
   Svg.classList.remove("activeEven") 
-  Svg.classList.add("activeRot")
+  Svg.classList.add("activeR")
   
 // }else {
 //   Svg.classList.remove("activeR")
@@ -150,8 +156,7 @@ if(swiper1.realIndex ==3){
 }if (swiper1.realIndex ==4) {
   Svg.classList.add("activeEven")
   Svg.classList.remove("activeR")
-
-  
+ 
 }
 
 

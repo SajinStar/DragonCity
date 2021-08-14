@@ -346,7 +346,7 @@ height: 100%;
 }
 
 .secondSliderFirstItem  {
-  top: 30%;
+  top: 23%;
   z-index: 999;
   left: 13%;
 }
@@ -356,7 +356,7 @@ height: 100%;
   left: 13%;
 }
 .secondSliderThirdItem  {
-  top: 30%;
+  top: 23%;
   z-index: 999;
   right: 14%;
 }
@@ -438,7 +438,7 @@ order: 1;
  justify-content: center;
  width: 100vw;
   top: 80%;
-  padding-right: 15px;
+  padding-right: 45px;
 }
 
 .secondSliderFourthItem {
@@ -472,7 +472,7 @@ order: 1;
 }
 
 .secondSliderRightText {
-  padding-left: 40px;
+  /* padding-left: 40px; */
   font-family: 'EuclidSquare' !important;
 }
 
@@ -500,9 +500,10 @@ order: 1;
     position: absolute;
     left: 0;
     right: 13%;
-    top: 58%;
+    top: 35%;
     margin-right: auto;
     z-index: 9999;
+    display: none;
 }                                                                                   
 .tirdSliderShopAddItoys {
   margin-left: auto;
@@ -510,9 +511,11 @@ order: 1;
     position: absolute;
     left: 13%;
     right: 0;
-    top: 48%;
+    top: 20%;
     margin-right: auto;
     z-index: 9999;
+    display: none;
+
 }
                                                                                 
 .tirdSliderShopAdd img {
@@ -576,9 +579,9 @@ order: 1;
 } */
 
 @media only screen and (max-width: 500px) {
-.thirdSliderSection {
+/* .thirdSliderSection {
   padding: 150px 0px 0px 20px;
-}
+} */
 
 .thirdSliderAllIcons {
     position: absolute;
@@ -604,15 +607,18 @@ order: 1;
 .tirdSliderShopAddItoys img {
   max-width: 125px;
 }
-.tirdSliderShopAdd {
+/* .tirdSliderShopAdd {
   right: 19%;
   top: 33%;
+  
 }
 .tirdSliderShopAddItoys {
   left: 35%;
     right: 0px;
-    top: 25%
-}
+    top: 25%;
+    
+   
+} */
 .thirdSliderFirstIcon {
   top: 64%;
   left: 3%;
@@ -1268,7 +1274,7 @@ height: auto;
 
 .activeR {
   transform: rotate(180deg);
-  top: 110%;
+  top: 100%;
   transform-origin: 50% 0;
 
 }
@@ -1279,18 +1285,18 @@ height: auto;
     transform-origin: 50% 0;
   
   } */
-@media only screen and (max-width: 800px) {
+/* @media only screen and (max-width: 800px) {
   .activeR {
     transform: rotate(180deg);
     top: 105%;
     transform-origin: 50% 0;
   
   }
-}
+} */
 @media only screen and (max-width: 450px) {
   .activeR {
     transform: rotate(180deg);
-    top: 100%;
+    top: 95%;
     transform-origin: 50% 0;
   
   }
@@ -1303,16 +1309,11 @@ height: auto;
 }
 .activeEven {
   transform: rotate( 360deg);
-    top: 0%;
+    top: 5%;
     transform-origin: 54% 0;
 
 }
 
-.activeBgImg {
-  transform: rotateY(180deg);
-  transform-style: preserve-3d;
-  transition: all 1s ease-in-out;
-}
 
 
 
