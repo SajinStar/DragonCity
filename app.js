@@ -5,14 +5,14 @@
 // })
 
 var swiper1 = new Swiper(".mySwiper1", {
+  direction: "vertical",
   pagination: {
     el: ".swiper-pagination",
     clickable: true 
   },
-  direction: "vertical",
   mousewheel: {
     releaseOnEdges: true,
-  },
+  }
 });
 
 var swiper2 = new Swiper(".mySwiper3", {
@@ -95,7 +95,7 @@ var swiper3 = new Swiper(".mySwiper4", {
 
 
   //  gsap anime
-const Svg=document.querySelector(".landingRotatingSvg")
+const Svg=document.querySelector(".svgContent")
 const bgSlider=document.querySelector(".firstSlideWrapper")
 const BgInsideImg=document.querySelector(".landingPageImage")
 const thirdOnlyShow=document.querySelector(".tirdSliderShopAdd")
@@ -227,9 +227,9 @@ if(swiper1.realIndex ==1){
     } 
   });
 
-  function isOdd(num) {
-    return num % 2;
-  }
+  // function isOdd(num) {
+  //   return num % 2;
+  // }
 
 
 gsap.from(".secondSliderIcon", {

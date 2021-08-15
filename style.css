@@ -8,7 +8,6 @@
 body {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   overflow: hidden;
 }
 body::-webkit-scrollbar {
@@ -1307,8 +1306,6 @@ height: auto;
 }
 
 .landingRotatingSvg {
-
-  
     position: absolute;
     top: 0%;
     width: 100vw;
@@ -1328,12 +1325,12 @@ height: auto;
   }
 }
 
-.activeR {
+/* .activeR {
   transform: rotate(180deg);
   top: 100%;
   transform-origin: 50% 0;
 
-}
+} */
 /* @media only screen and (max-width: 500px) {
   .activeR {
     transform: rotate(180deg);
@@ -1349,7 +1346,7 @@ height: auto;
   
   }
 } */
-@media only screen and (max-width: 450px) {
+/* @media only screen and (max-width: 450px) {
   .activeR {
     transform: rotate(180deg);
     top: 95%;
@@ -1368,7 +1365,7 @@ height: auto;
     top: 5%;
     transform-origin: 54% 0;
 
-}
+} */
 
 .highIndex{
   z-index: 4;
@@ -1376,7 +1373,36 @@ height: auto;
 .lowIndex{
   z-index: 2;
 }
-
-
+.svgSection {
+display: block;
+overflow: hidden;
+width: 100vw;
+display: flex;
+justify-content: center;
+}
+.svgContent {
+position: absolute;
+top: 50%;
+left: auto;
+width: 144vw;
+height: 186%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+-webkit-transform-style: preserve-3d;
+transform-style: preserve-3d;
+-webkit-transform-origin: 50% 0;
+-ms-transform-origin: 50% 0;
+transform-origin: 50% 0;
+-webkit-transition: 1s .2s cubic-bezier(.88,.17,0,.99);
+-o-transition: 1s .2s cubic-bezier(.88,.17,0,.99);
+transition: 1s .2s cubic-bezier(.88,.17,0,.99);
+will-change: transform;
+}
+.activeR {
+  transform: rotate(180deg);
+}
+.activeEven {
+  transform: rotate(360deg);
+}
 
 
