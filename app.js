@@ -100,6 +100,10 @@ const bgSlider=document.querySelector(".firstSlideWrapper")
 const BgInsideImg=document.querySelector(".landingPageImage")
 const thirdOnlyShow=document.querySelector(".tirdSliderShopAdd")
 const thirdOnlyShowSecond=document.querySelector(".tirdSliderShopAddItoys")
+const firstIndex=document.querySelector(".secondSliderImageInsidefirst")
+const secondIndex=document.querySelector(".secondSliderImageInsideSecond")
+const thirdIndex=document.querySelector(".secondSliderImageInsideThird")
+
   swiper1.on("transitionEnd", function () {
 if (swiper1.realIndex > 2){
   BgInsideImg.style.display="none"
@@ -111,107 +115,86 @@ if (swiper1.realIndex > 4){
 } else {
   bgSlider.style.display="block"
 }
+if (swiper1.realIndex ==0){
+  Svg.classList.remove("activeR")
+  Svg.classList.remove("activeEven")
+  firstIndex.classList.add("highIndex")
+  firstIndex.classList.remove("lowIndex")
+  gsap.from(".secondSliderImageInsidefirst", { 
+    duration:1,
+    transformOrigin:"left",
+    opacity:1,
+    scaleX:0,
+    
+  }); 
+} else {
+  firstIndex.classList.add("lowIndex")
+  firstIndex.classList.remove("highIndex")
+  gsap.to(".secondSliderImageInsidefirst", { 
+  });
+} 
 if(swiper1.realIndex ==1){
   Svg.classList.add("activeR")
   Svg.classList.remove("activeEven")
-  gsap.to(".secondSliderImageInsideSecond", { 
-    zIndex:4,
-    width:"300px",
-  });
+  secondIndex.classList.add("highIndex")
+  secondIndex.classList.remove("lowIndex")
+  gsap.from(".secondSliderImageInsideSecond", {
+   duration:1,
+    transformOrigin:"left",
+    opacity:1,
+    scaleX:0,
+});
 }else{
-  gsap.from(".secondSliderImageInsideSecond", {  
-    zIndex: 2,
-   })
-} 
-
-if (swiper1.realIndex ==2) {
+  secondIndex.classList.add("lowIndex")
+  secondIndex.classList.remove("highIndex")
+  gsap.to(".secondSliderImageInsideSecond",{
+  });
+}if (swiper1.realIndex ==2) {
   Svg.classList.add("activeEven")
   Svg.classList.remove("activeR")
   thirdOnlyShow.style.display="block"
   thirdOnlyShowSecond.style.display="block"
-  gsap.to(".secondSliderImageInsideThird", { 
-    zIndex:5,
-    width:"300px",
+  thirdIndex.classList.add("highIndex")
+  thirdIndex.classList.remove("lowIndex")
+  gsap.from(".secondSliderImageInsideThird", { 
+    duration:1,
+    transformOrigin:"left",
+    opacity:1,
+    scaleX:0,
   });
-  
 }else {
+  thirdIndex.classList.add("lowIndex")
+  thirdIndex.classList.remove("highIndex")
   thirdOnlyShow.style.display="none"
   thirdOnlyShowSecond.style.display="none"
   gsap.to(".secondSliderImageInsideThird", { 
-    zIndex:1,
-    width:"300px",
   });
-}
-
-
-if(swiper1.realIndex ==3){
+}if(swiper1.realIndex ==3){
   Svg.classList.remove("activeEven") 
-  Svg.classList.add("activeR")
-  
-// }else {
-//   Svg.classList.remove("activeR")
-//   Svg.classList.remove("activeEven")
-// }
-
+  Svg.classList.add("activeR")  
 }if (swiper1.realIndex ==4) {
   Svg.classList.add("activeEven")
   Svg.classList.remove("activeR")
- 
 }
-
-
-
- if (swiper1.realIndex ==0){
-  Svg.classList.remove("activeR")
-  Svg.classList.remove("activeEven")
-  gsap.to(".secondSliderImageInsidefirst", { 
-    width:"300px",
-    zIndex:6,
-  });
-  // frameImg.src="./Img/landingpageImg/1 page image.png"     
-
-} else {
-  gsap.to(".secondSliderImageInsidefirst", { 
-    zIndex:1,
-    width:"300px",
-  });
-}
-
-
-
-
-    // if (isOdd(swiper1.realIndex)) {
-    //   Svg.classList.add("activeR")
-    //   Svg.classList.remove("activeEven") 
-     
-
-    // } else {
-    //   Svg.classList.add("activeEven") 
-    //   Svg.classList.remove("activeR")
-    // }
-    // if(swiper.realIndex == 0){
-    //   Svg.classList.remove("activeEven") 
-    // }
-    
     if (swiper1.realIndex ==0){
       gsap.from(".landingSectionApp", { 
         opacity: .2,
-         duration:2, 
-         y:-200 ,yoyo:true,
+         duration:1, 
+         y:-200 ,
       });
       gsap.from(".landingPageImageBgText", { 
         opacity: .2,
-         duration:2, 
+         duration:1, 
          y:-200 
       });
       gsap.from(".landingPageBotText", {
          opacity: .2, 
-         duration:2, 
+         duration:1, 
          x:-300 
         });
       gsap.from(".landingPageStore", {
          opacity: .2,
-          duration:2,
+          duration:1,
            y:300 
         });
    
@@ -219,7 +202,7 @@ if(swiper1.realIndex ==3){
     if (swiper1.realIndex==1){
       gsap.from(".secondSliderAbsoulteItems", {
         opacity: 0.2,
-         duration:2,
+         duration:1,
           y:200 ,
        });
        gsap.from(".landingPageImageBgText", { 
@@ -232,12 +215,12 @@ if(swiper1.realIndex ==3){
     }else if (swiper1.realIndex==2){
       gsap.from(".thirdSliderIcons",{
         opacity:0,
-        duration:2,
+        duration:1,
         
       })
       gsap.from(".landingPageImageBgText", { 
         opacity: .2,
-         duration:2, 
+         duration:1, 
          y:-200 
       });
       // frameImg.src="./Img/thirdSlider/thirdsliderMblImg.png"
@@ -252,7 +235,7 @@ if(swiper1.realIndex ==3){
 gsap.from(".secondSliderIcon", {
   // scrollTrigger:".secondSliderIcon",
    opacity: 1,
-    duration:3,
+    duration:1,
      y:100 ,
   });
 
