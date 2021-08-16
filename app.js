@@ -103,6 +103,8 @@ const thirdOnlyShowSecond=document.querySelector(".tirdSliderShopAddItoys")
 const firstIndex=document.querySelector(".secondSliderImageInsidefirst")
 const secondIndex=document.querySelector(".secondSliderImageInsideSecond")
 const thirdIndex=document.querySelector(".secondSliderImageInsideThird")
+const blackLogo=document.querySelector(".landingPageLogoBlack")
+const whiteLogo=document.querySelector(".landingPageLogoWhite")
 
   swiper1.on("transitionEnd", function () {
 if (swiper1.realIndex > 2){
@@ -116,6 +118,8 @@ if (swiper1.realIndex > 4){
   bgSlider.style.display="block"
 }
 if (swiper1.realIndex ==0){
+  blackLogo.style.display="flex"
+  whiteLogo.style.display="none"
   Svg.classList.remove("activeR")
   Svg.classList.remove("activeEven")
   firstIndex.classList.add("highIndex")
@@ -134,6 +138,8 @@ if (swiper1.realIndex ==0){
   });
 } 
 if(swiper1.realIndex ==1){
+  blackLogo.style.display="none"
+  whiteLogo.style.display="flex"
   Svg.classList.add("activeR")
   Svg.classList.remove("activeEven")
   secondIndex.classList.add("highIndex")
@@ -150,6 +156,8 @@ if(swiper1.realIndex ==1){
   gsap.to(".secondSliderImageInsideSecond",{
   });
 }if (swiper1.realIndex ==2) {
+  blackLogo.style.display="flex"
+  whiteLogo.style.display="none"
   Svg.classList.add("activeEven")
   Svg.classList.remove("activeR")
   thirdOnlyShow.style.display="block"
@@ -170,9 +178,13 @@ if(swiper1.realIndex ==1){
   gsap.to(".secondSliderImageInsideThird", { 
   });
 }if(swiper1.realIndex ==3){
+  blackLogo.style.display="none"
+  whiteLogo.style.display="flex"
   Svg.classList.remove("activeEven") 
   Svg.classList.add("activeR")  
 }if (swiper1.realIndex ==4) {
+  blackLogo.style.display="flex"
+  whiteLogo.style.display="none"
   Svg.classList.add("activeEven")
   Svg.classList.remove("activeR")
 }
@@ -210,7 +222,7 @@ if(swiper1.realIndex ==1){
          duration:2, 
          y:-200 
       });
-      //  frameImg.src="./Img/secondSlider/2nd page image.png"
+     
        
     }else if (swiper1.realIndex==2){
       gsap.from(".thirdSliderIcons",{
@@ -223,17 +235,14 @@ if(swiper1.realIndex ==1){
          duration:1, 
          y:-200 
       });
-      // frameImg.src="./Img/thirdSlider/thirdsliderMblImg.png"
+    
     } 
   });
 
-  // function isOdd(num) {
-  //   return num % 2;
-  // }
+  
 
 
 gsap.from(".secondSliderIcon", {
-  // scrollTrigger:".secondSliderIcon",
    opacity: 1,
     duration:1,
      y:100 ,

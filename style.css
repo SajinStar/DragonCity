@@ -67,6 +67,19 @@ height: 100%;
   padding-top: 40px;
   padding-bottom: 30px;
 }
+.logoBlack {
+  z-index: 1;
+}
+.landingPageLogoWhite {
+  display: none;
+}
+/* .landingPageLogoBlack {
+  display: none;
+} */
+.logoWhite{
+  z-index: 1;
+}
+
 .landingPageLogo img {
   width: 130px;
   height: auto;
@@ -177,7 +190,7 @@ height: 100%;
 }
 
 .landingPageBot {
-  height: 100vh;
+  height: 75vh;
   display: flex;
   align-items: center;
 }
@@ -233,7 +246,6 @@ height: 100%;
 }
 @media only screen and (max-width: 500px) {
   .landingPageBot {
-    height: 100vh;
     display: flex;
     align-items: center;
   }
@@ -332,6 +344,7 @@ height: 100%;
   height: 100vh !important;
   position: relative;
   overflow: hidden;
+  padding-top: 200px;
 }
 
 .secondSliderAbsoulteItems{
@@ -1231,6 +1244,7 @@ height: auto;
 .swiperSlidersSection {
   position: relative;
   height: 100vh;
+  padding-top: 150px;
 }
 
 .swiperSlidersSection svg {
