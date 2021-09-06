@@ -8,13 +8,14 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 body::-webkit-scrollbar {
   display: none;
 }
 .swiperSection {
   height: 100vh;
+  overflow: hidden;
 }
 
 .swiperSection > div {
@@ -516,10 +517,10 @@ order: 1;
     position: absolute;
     left: 0;
     right: 13%;
-    top: 35%;
+    top: 40%;
     margin-right: auto;
     z-index: 9999;
-    display: none;
+   
 }                                                                                   
 .tirdSliderShopAddItoys {
   margin-left: auto;
@@ -527,11 +528,10 @@ order: 1;
     position: absolute;
     left: 13%;
     right: 0;
-    top: 20%;
+    top: 50%;
     margin-right: auto;
     z-index: 9999;
-    display: none;
-
+    
 }
                                                                                 
 .tirdSliderShopAdd img {
@@ -636,27 +636,27 @@ order: 1;
    
 } */
 .thirdSliderFirstIcon {
-  top: 64%;
+  top: 72%;
   left: 3%;
 }
 .thirdSliderSecondIcon {
-  top: 72%;
+  top: 80%;
     left: 17%;
 }
 .thirdSliderThirdIcon {
-  top: 64%;
+  top: 72%;
     left: 33%;
 }
 .thirdSliderFourthIcon {
-  top: 72%;
+  top: 80%;
   right: 2%
 }
 .thirdSliderFifthIcon {
-  top: 64%;
+  top: 72%;
   right: 17%;
 }
 .thirdSliderSixthIcon {
-  top: 72%;
+  top: 80%;
   right: 33%
 }
 
@@ -664,7 +664,7 @@ order: 1;
 
 @media only screen and (min-height:700px){
  .thirdSliderText {
-   bottom: 10% !important;
+   bottom: 2% !important;
  }
 
 }
@@ -860,7 +860,7 @@ order: 1;
     display: none;
   }
   .mySwiper4 {
-    margin:  0 0 0 15px;
+    margin:  0 0 0 0px;
 }
 }
 
@@ -1009,7 +1009,7 @@ order: 1;
   color: rgb(0, 0, 0);
   background-color: #EDE3B0;
   box-shadow: inset 0 0px 0 rgb(0 0 0 / 13%);
-  border-radius: 20px 20px 0px 0px !important;
+  /* border-radius: 20px 20px 0px 0px !important; */
 }
 
 .accordion-body {
@@ -1212,7 +1212,9 @@ height: auto;
   -webkit-align-items: center;
   align-items: center;
 }
-
+.mainWrapper {
+  display: block;
+}
 .mySwiper3 .swiper-wrapper .swiper-slide img {
   display: block;
   width: 207px;
@@ -1388,6 +1390,15 @@ transform-origin: 50% 0;
 -o-transition: 1s .2s cubic-bezier(.88,.17,0,.99);
 transition: 1s .2s cubic-bezier(.88,.17,0,.99);
 will-change: transform;
+}
+@media only screen and (max-width: 680px){
+.svgContent  {
+    width: 255vw;
+}
+}
+.svgTopMove {
+  top: -50% !important;
+  transition: 1s .2s cubic-bezier(.88,.17,0,.99) !important;
 }
 .activeR {
   transform: rotate(180deg);

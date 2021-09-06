@@ -14,7 +14,9 @@ var swiper1 = new Swiper(".mySwiper1", {
   },
   mousewheel: {
     releaseOnEdges: true,
-  }
+  },
+  speed : 1000,
+  // delayBetweenSlides: 700,
 });
 
 var swiper2 = new Swiper(".mySwiper3", {
@@ -98,15 +100,25 @@ var swiper3 = new Swiper(".mySwiper4", {
 
   //  gsap anime
 const Svg=document.querySelector(".svgContent")
-const bgSlider=document.querySelector(".firstSlideWrapper")
+const bgSlider=document.querySelector(".landingPageImageBgText" )
+const bgicon=document.querySelector( ".logoContainer" )
 const BgInsideImg=document.querySelector(".landingPageImage")
-const thirdOnlyShow=document.querySelector(".tirdSliderShopAdd")
-const thirdOnlyShowSecond=document.querySelector(".tirdSliderShopAddItoys")
 const firstIndex=document.querySelector(".secondSliderImageInsidefirst")
 const secondIndex=document.querySelector(".secondSliderImageInsideSecond")
 const thirdIndex=document.querySelector(".secondSliderImageInsideThird")
 const blackLogo=document.querySelector(".landingPageLogoBlack")
 const whiteLogo=document.querySelector(".landingPageLogoWhite")
+const svgBgImg=document.querySelector(".svgSection")
+
+document.addEventListener("mousewheel", function(event){
+  if(swiper1.realIndex > 4){
+    Svg.classList.add("svgTopMove")
+  }else{
+    console.log("down")
+    Svg.classList.remove("svgTopMove")
+  }
+})
+
 
   swiper1.on("transitionEnd", function () {
 if (swiper1.realIndex > 2){
@@ -116,8 +128,12 @@ if (swiper1.realIndex > 2){
 }
 if (swiper1.realIndex > 4){
   bgSlider.style.display="none"
+  bgicon.style.display="none"
+  // Svg.classList.add("svgTopMove")
 } else {
   bgSlider.style.display="block"
+  bgicon.style.display="block"
+  // Svg.classList.remove("svgTopMove")
 }
 if (swiper1.realIndex ==0){
   blackLogo.style.display="flex"
@@ -162,8 +178,7 @@ if(swiper1.realIndex ==1){
   whiteLogo.style.display="none"
   Svg.classList.add("activeEven")
   Svg.classList.remove("activeR")
-  thirdOnlyShow.style.display="block"
-  thirdOnlyShowSecond.style.display="block"
+ 
   thirdIndex.classList.add("highIndex")
   thirdIndex.classList.remove("lowIndex")
   gsap.from(".secondSliderImageInsideThird", { 
@@ -175,8 +190,6 @@ if(swiper1.realIndex ==1){
 }else {
   thirdIndex.classList.add("lowIndex")
   thirdIndex.classList.remove("highIndex")
-  thirdOnlyShow.style.display="none"
-  thirdOnlyShowSecond.style.display="none"
   gsap.to(".secondSliderImageInsideThird", { 
   });
 }if(swiper1.realIndex ==3){
@@ -184,6 +197,7 @@ if(swiper1.realIndex ==1){
   whiteLogo.style.display="flex"
   Svg.classList.remove("activeEven") 
   Svg.classList.add("activeR")  
+  BgInsideImg.style.overFlow="visible"
 }if (swiper1.realIndex ==4) {
   blackLogo.style.display="flex"
   whiteLogo.style.display="none"
