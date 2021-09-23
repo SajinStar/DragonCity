@@ -205,52 +205,52 @@ if(swiper1.realIndex ==1){
   Svg.classList.remove("activeR")
 }
     if (swiper1.realIndex ==0){
-      gsap.from(".landingSectionApp", { 
-        opacity: .2,
-         duration:1, 
-         y:-200 ,
-      });
-      gsap.from(".landingPageImageBgText", { 
-        opacity: .2,
-         duration:1, 
-         y:-200 
-      });
-      gsap.from(".landingPageBotText", {
-         opacity: .2, 
-         duration:1, 
-         x:-300 
-        });
-      gsap.from(".landingPageStore", {
-         opacity: .2,
-          duration:1,
-           y:300 
-        });
+      // gsap.from(".landingSectionApp", { 
+      //   opacity: .2,
+      //    duration:1, 
+      //    y:-200 ,
+      // });
+      // gsap.from(".landingPageImageBgText", { 
+      //   opacity: .2,
+      //    duration:1, 
+      //    y:-200 
+      // });
+      // gsap.from(".landingPageBotText", {
+      //    opacity: .2, 
+      //    duration:1, 
+      //    x:-300 
+      //   });
+      // gsap.from(".landingPageStore", {
+      //    opacity: .2,
+      //     duration:1,
+      //      y:300 
+      //   });
    
     }
     if (swiper1.realIndex==1){
       gsap.from(".secondSliderAbsoulteItems", {
-        opacity: 0.2,
+        opacity: 0,
          duration:1,
           y:200 ,
        });
-       gsap.from(".landingPageImageBgText", { 
-        opacity: .2,
-         duration:2, 
-         y:-200 
-      });
+      //  gsap.from(".landingPageImageBgText", { 
+      //   opacity: .2,
+      //    duration:2, 
+      //    y:-200 
+      // });
      
        
     }else if (swiper1.realIndex==2){
-      gsap.from(".thirdSliderIcons",{
-        opacity:0,
-        duration:1,
+      // gsap.from(".thirdSliderIcons",{
+      //   opacity:0,
+      //   duration:1,
         
-      })
-      gsap.from(".landingPageImageBgText", { 
-        opacity: .2,
-         duration:1, 
-         y:-200 
-      });
+      // })
+      // gsap.from(".landingPageImageBgText", { 
+      //   opacity: .2,
+      //    duration:1, 
+      //    y:-200 
+      // });
     
     } 
   });
@@ -258,11 +258,11 @@ if(swiper1.realIndex ==1){
   
 
 
-gsap.from(".secondSliderIcon", {
-   opacity: 1,
-    duration:1,
-     y:100 ,
-  });
+// gsap.from(".secondSliderIcon", {
+//    opacity: 1,
+//     duration:1,
+//      y:100 ,
+//   });
 
 //   const myImgs = document.querySelectorAll('.animate-me');
 

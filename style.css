@@ -348,7 +348,7 @@ height: 100%;
   display: flex;
   position: absolute;
   color: rgb(0, 0, 0);
-  opacity: 1;
+  opacity: 0;
 
 }
 
@@ -760,9 +760,14 @@ order: 1;
 }
 
 .testimonialsSliderSection {
-  background-color: #ED656B;
+  /* background-color: #ED656B; */
   height: 100vh;
   position: relative;
+}
+@media screen and (max-width: 500px) {
+  .testimonialsSliderSection {
+    background-color: #ED656B;
+  }
 }
 .testimonialBox > div > p {
   color: white;
