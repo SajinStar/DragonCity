@@ -103,13 +103,23 @@ const Svg=document.querySelector(".svgContent")
 const bgSlider=document.querySelector(".landingPageImageBgText" )
 const bgicon=document.querySelector( ".logoContainer" )
 const BgInsideImg=document.querySelector(".landingPageImage")
+const secondItems=document.querySelector(".secondSliderAbsoulteItems")
 const firstIndex=document.querySelector(".secondSliderImageInsidefirst")
 const secondIndex=document.querySelector(".secondSliderImageInsideSecond")
 const thirdIndex=document.querySelector(".secondSliderImageInsideThird")
 const blackLogo=document.querySelector(".landingPageLogoBlack")
 const whiteLogo=document.querySelector(".landingPageLogoWhite")
 const svgBgImg=document.querySelector(".svgSection")
-
+ function onload(){
+  var theDelay = 1.5;
+  var timer = setTimeout("showText()",theDelay*1000)
+}
+function showText(){
+  document.querySelector(".secondSliderFirstItem").style.visibility = "visible";
+  document.querySelector(".secondSliderSecondItem").style.visibility = "visible";
+  document.querySelector(".secondSliderThirdItem").style.visibility = "visible";
+  document.querySelector(".secondSliderFourthItem").style.visibility = "visible";
+}
 document.addEventListener("mousewheel", function(event){
   if(swiper1.realIndex > 4){
     Svg.classList.add("svgTopMove")
@@ -119,45 +129,12 @@ document.addEventListener("mousewheel", function(event){
 })
 document.addEventListener("mousewheel", function(event){
   if (swiper1.realIndex ==0){
-    gsap.from(".landingSectionApp", { 
-      delay:1,
-    });
-    // gsap.from(".landingPageImageBgText", { 
-    //   duration:1,
-    //   opacity:0,
-    //   y:-200,
-    //   delay:1,
-    // });
-    gsap.from(".landingPageBotText", {
- 
-      delay:1,
-      });
-    gsap.from(".landingPageStore", {
 
-      delay:1,
-      });
   } if(swiper1.realIndex ==1){
-    gsap.from(".secondSliderAbsoulteItems ", { 
-
-      delay:1,
-    });  
-    // gsap.from(".landingPageImageBgText", { 
-    //   opacity: .2,
-    //    duration:1, 
-    //    y:-200 ,
-    //    delay:1,
-    // });
+  }else{   
   }
   if (swiper1.realIndex==2){
-      gsap.from(".thirdSliderIcons",{
-        delay:1,
-      })
-      // gsap.from(".landingPageImageBgText", { 
-      //   duration:1,
-      //   opacity:0,
-      //   y:-200,
-      //   delay:1,
-      // }); 
+    
     } 
 })
 
@@ -198,6 +175,7 @@ if (swiper1.realIndex ==0){
   });
 } 
 if(swiper1.realIndex ==1){
+  onload(); 
   blackLogo.style.display="none"
   whiteLogo.style.display="flex"
   Svg.classList.add("activeR")
