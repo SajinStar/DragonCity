@@ -114,7 +114,6 @@ document.addEventListener("mousewheel", function(event){
   if(swiper1.realIndex > 4){
     Svg.classList.add("svgTopMove")
   }else{
-    console.log("down")
     Svg.classList.remove("svgTopMove")
   }
 })
@@ -154,7 +153,7 @@ document.addEventListener("mousewheel", function(event){
   
   if(swiper1.realIndex ==1){
     gsap.from(".secondSliderAbsoulteItems ", { 
-      duration:2,
+      duration:1,
       transformOrigin:"left",
       opacity:1,
       scaleX:0,
@@ -168,7 +167,7 @@ document.addEventListener("mousewheel", function(event){
   }
   if (swiper1.realIndex==2){
       gsap.from(".thirdSliderIcons",{
-        duration:2,
+        duration:1,
       transformOrigin:"left",
       opacity:1,
       scaleX:0,
@@ -321,48 +320,13 @@ if(swiper1.realIndex ==1){
     } 
   });
 
-  
 
 
-// gsap.from(".secondSliderIcon", {
-//    opacity: 1,
-//     duration:1,
-//      y:100 ,
-//   });
-
-//   const myImgs = document.querySelectorAll('.animate-me');
-
-// let observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     if (entry.intersectionRatio > 0) {
-//       console.log('in the view');
-//     } else {
-//       console.log('out of view');
-//     }
-//   });
-// });
-
-// myImgs.forEach(image => {
-//   observer.observe(image);
-// });
 
 
-  // if (isOdd(swiper1.realIndex)) {
-    // gsap.to(".landingRotatingSvg", { left: 0, rotate: 180, top: 0 , duration:2,  });
 
-//       var tl = gsap.timeline({ defaults: {duration: 3,} } );
-// tl.to(".landingRotatingSvg", {left: -270}) 
-//   .to(".landingRotatingSvg", {rotate: 180 ,top: 0, transformOrigin:"left"})
-//   .to(".landingRotatingSvg", {left:"100%"});
-  // } else {
-    // gsap.to(".landingRotatingSvg", {
-    //   left: 0,
-    //   rotate:0,
-    //   bottom: -100,
-    //   top: "initial",
-    //   duration:1.5,
 
-    // });
+
 
       
                                                                                                                                                                                
