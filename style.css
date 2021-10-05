@@ -98,8 +98,20 @@ height: 100%;
   top: 65%;
   left: 23%;
   color: #ffffff;
+  /* animation: animate 2s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards; */
+   
 }
 
+ /* @keyframes animate {
+   0%{
+     bottom: -100px;
+   }
+   100%{
+     bottom: 0px;
+   }
+ } */
 .landingPageBotText p {
  font-size: 18px;
  font-weight: 300;
@@ -348,8 +360,7 @@ height: 100%;
   display: flex;
   position: absolute;
   color: rgb(0, 0, 0);
-  opacity: 0;
-
+  opacity: 1;
 }
 
 .secondSliderAbsoulteItems p {
@@ -757,6 +768,7 @@ order: 1;
   color: rgb(255, 255, 255);
   text-align: center;
   font-size: 32px;
+  margin-bottom: 30px;
 }
 
 .testimonialsSliderSection {
